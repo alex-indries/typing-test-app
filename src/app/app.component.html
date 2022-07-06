@@ -5,6 +5,14 @@
 
       <p class="has-text-centered">
         {{ randomSentence }}
+        <br />
+        <span
+          [ngClass]="
+            letter === randomSentence.split('')[i] ? 'success' : 'error'
+          "
+          *ngFor="let letter of myText.split(''); let i = index"
+          >{{ letter }}</span
+        >
       </p>
 
       <div class="field">
@@ -14,7 +22,7 @@
         />
       </div>
 
-      <div *ngIf="randomSentence === enteredText" class="box has-text-centered">
+      <div *ngIf="randomSentence === myText" class="box has-text-centered">
         <h1 class="title">Success!</h1>
       </div>
     </div>

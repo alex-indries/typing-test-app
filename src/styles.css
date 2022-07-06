@@ -1,1 +1,9 @@
 @import "bulma/css/bulma.css";
+
+.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
